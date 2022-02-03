@@ -7,7 +7,6 @@ import {
   //ParseArrayPipe,
   Get,
   Param,
-  Put,
   Patch,
 } from '@nestjs/common';
 import { CreateUserDto } from './create-user.dto';
@@ -53,7 +52,7 @@ export class UsersController {
   async updateContacts(
     @Param('id') id: string,
     @Body() updateUserDto: UpdateUserDto,
-  ) {
+  ): Promise<User> {
     return await this.usersService.updateUserContacts(id, updateUserDto);
     //return `This action updates a #${id} user`;
   }

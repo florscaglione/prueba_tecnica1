@@ -10,15 +10,6 @@ import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { User, UserDocument } from './users.model';
 
-/* @Injectable()
-export class UsersService {
-  persist(user: CreateUserDto): Users {
-    // la funcion persist recibe un user que sera del tipo CreateUsersDto, y devuelve un Users
-    // TODO insertar en base de datos
-    return user;
-  }
-} */ //PRIMERAS PRUEBAS
-
 @Injectable()
 export class UsersService {
   constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
