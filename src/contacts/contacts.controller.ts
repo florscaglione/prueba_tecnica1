@@ -7,13 +7,21 @@ import { Contacts } from './contacts.interface';
 export class ContactsController {
   constructor(private readonly contactsService: ContactsService) {}
 
+  // Endpoint para guardar un contacto
   @Post('save-contact')
   async createContact(@Body() contact: CreateContactDto): Promise<Contacts> {
     return this.contactsService.saveContact(contact);
   }
 
+  // Endpoint para obtener todos los contactos de un usuario
   @Get(':id')
   async getContacts(@Param('id') id: string): Promise<Contacts[]> {
     return this.contactsService.getContacts(id);
+  }
+
+  // Endpoint para obtener los contactos comunes entre dos usuarios(HACER!!)
+  @Get(':id')
+  async getCommonContacts(@Param('id') id: string): Promise<Contacts[]> {
+    return this.contactsService.getCommonContacts(id);
   }
 }
