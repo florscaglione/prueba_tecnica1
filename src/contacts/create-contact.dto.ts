@@ -1,5 +1,9 @@
+import { IsNotEmpty } from 'class-validator';
+
 export class CreateContactDto {
+  @IsNotEmpty()
   contactName: string;
-  phone: number;
-  userStartUp: object; //para que me diga los datos del usuario al cual pertenece esta agenda, ES ASI??
+
+  @IsNotEmpty()
+  phone: string;
 }
