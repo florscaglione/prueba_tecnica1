@@ -26,11 +26,28 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Built whit:
+
+- NestJS - (Framework for building efficient, scalable Node.js web applications)
+- MongoDB - (Database)
+- Mongoose - (MongoDB object modeling tool)
+
 ## Installation
 
 ```bash
 $ npm install
+
+# NestJS (https://docs.nestjs.com/)
+$ npm i -g @nestjs/cli
+$ nest new project-name
+
+# MongoDB
+Download here: (https://docs.mongodb.com/manual/administration/install-community/)
+
+# Mongoose (https://docs.nestjs.com/techniques/mongodb)
+$ npm install --save @nestjs/mongoose mongoose
 ```
+
 
 ## Running the app
 
